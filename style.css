@@ -1,0 +1,334 @@
+/* ==========================================================================
+   1. ROOT VARIABLES (MÀU SẮC + DESIGN SYSTEM)
+   ========================================================================== */
+:root {
+	/** Màu xanh neon mát lạnh - Dùng cho các chi tiết làm điểm nhấn nổi bật toàn trang như Logo, đường gạch chân Menu, Icon */
+	--primary: #00bfff;
+
+	/** Màu xanh neon đậm - Dùng để chuyển đổi tông màu hoặc làm màu nền phụ khi cần độ tương phản cao */
+	--primary-dark: #0099cc;
+
+	/** Màu chuyển sắc Gradient (Xanh neon sang Xanh sáng) tạo hiệu ứng băng giá - Dùng làm nền cho Banner Hero và các nút bấm chính (Button) */
+	--gradient: linear-gradient(135deg, #00bfff, #66e0ff);
+
+	/** Màu xanh đại dương đậm - Dùng làm màu nền cho các khối lớn, cố định vững chắc như thanh Header và thanh chân trang Footer */
+	--dark: #0c2461;
+
+	/** Màu nền chủ đạo của toàn bộ website - Sử dụng tone trắng xám dịu mắt, giúp các hộp sản phẩm (Card) nổi bật lên hẳn */
+	--bg-main: #f4f7f9;
+
+	/** Màu nền của hộp chứa sản phẩm - Sử dụng màu trắng tinh khiết để tạo sự sạch sẽ, tương phản tốt với nền trang web */
+	--bg-card: #ffffff;
+
+	/** Màu chữ tiêu đề chính - Sử dụng màu xanh sẫm để người dùng dễ đọc, không bị mỏi mắt và tăng tính sang trọng */
+	--text-main: #0a3d62;
+
+	/** Màu chữ mô tả phụ hoặc thông tin chi tiết nhỏ - Sử dụng màu xám nhẹ để phân cấp thông tin rõ ràng với tiêu đề chính */
+	--text-light: #57606f;
+
+	/** Màu đỏ hồng rực rỡ - Chỉ sử dụng cho mục đích cảnh báo, nút xóa hoặc làm nổi bật giá tiền sản phẩm và nhãn GIẢM GIÁ */
+	--danger: #ff4757;
+
+	/** Hiệu ứng đổ bóng nhẹ, mờ ảo - Áp dụng cho các hộp sản phẩm ở trạng thái bình thường để tạo chiều sâu không gian */
+	--shadow-soft: 0 6px 18px rgba(10, 61, 98, 0.08);
+
+	/** Hiệu ứng đổ bóng đậm có vệt sáng xanh - Kích hoạt khi di chuột vào sản phẩm, tạo cảm giác hộp sản phẩm đang phát sáng và nổi lên */
+	--shadow-hover: 0 15px 30px rgba(0, 191, 255, 0.25);
+}
+
+/* ==========================================================================
+   2. RESET & BASE (THIẾT LẬP MẶC ĐỊNH BAN ĐẦU)
+   ========================================================================== */
+* {
+	/** Khử khoảng cách lề ngoài mặc định của tất cả các thẻ HTML về 0 */
+	margin: 0;
+	/** Khử khoảng cách đệm trong mặc định của tất cả các thẻ HTML về 0 */
+	padding: 0;
+	/** Đảm bảo padding và border không làm tăng kích thước chiều rộng/cao thực tế của phần tử, tránh vỡ khung */
+	box-sizing: border-box;
+	/** Định dạng font chữ hiển thị chuẩn, mượt mà trên cả hệ điều hành Windows và Mac */
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	/** Áp dụng màu nền xám trắng tuyết dịu mắt cho toàn trang */
+	background: var(--bg-main);
+	/** Áp dụng màu chữ xanh sẫm mặc định cho toàn bộ nội dung văn bản */
+	color: var(--text-main);
+	/** Khoảng cách giữa các dòng chữ giúp văn bản thoáng và dễ đọc hơn (bằng 1.6 lần cỡ chữ) */
+	line-height: 1.6;
+}
+
+a {
+	/** Xóa bỏ đường gạch chân mặc định cực kỳ thô của các thẻ liên kết */
+	text-decoration: none;
+	/** Ép thẻ liên kết tự động lấy theo màu chữ của phần tử cha chứa nó */
+	color: inherit;
+}
+
+.container {
+	/** Chiếm tối đa 90% chiều rộng của màn hình thiết bị */
+	width: 90%;
+	/** Giới hạn chiều rộng tối đa là 1200px, giúp giao diện không bị căng quá rộng trên màn hình máy tính lớn */
+	max-width: 1200px;
+	/** Căn giữa khối container này ra chính giữa màn hình */
+	margin: auto;
+}
+
+/* ==========================================================================
+   3. HEADER (THANH ĐIỀU HƯỚNG TRÊN CÙNG)
+   ========================================================================== */
+header {
+	/** Sử dụng màu xanh đại dương đậm làm nền thanh điều hướng */
+	background: var(--dark);
+	/** Đổi màu toàn bộ chữ bên trong header sang màu trắng */
+	color: white;
+	/** Khoảng cách đệm: Trên dưới 15px, Trái phải dạt ra hai biên 5% */
+	padding: 15px 5%;
+	/** Kích hoạt Flexbox để dễ dàng sắp xếp Logo nằm bên trái và Menu nằm bên phải */
+	display: flex;
+	/** Đẩy Logo và Menu ra xa nhau nhất có thể, nằm sát về hai rìa thanh header */
+	justify-content: space-between;
+	/** Căn chỉnh cho Logo và Menu thẳng hàng đều nhau theo trục dọc */
+	align-items: center;
+	/** GIỮ CỐ ĐỊNH: Header sẽ bám dính ở đỉnh màn hình khi người dùng cuộn chuột xuống dưới */
+	position: sticky;
+	/** Vị trí dính là sát mép trên cùng của trình duyệt */
+	top: 0;
+	/** Đảm bảo thanh Header luôn nằm nổi lên lớp trên cùng, không bị hình ảnh sản phẩm đè khuất */
+	z-index: 100;
+	/** Tạo một lớp đổ bóng mờ phía dưới thanh header để phân tách với nội dung trang web */
+	box-shadow: 0 4px 12px rgba(12, 36, 97, 0.15);
+}
+
+.logo {
+	/** Phóng lớn kích thước chữ tên cửa hàng lên 24px */
+	font-size: 24px;
+	/** Làm đậm chữ để làm nổi bật thương hiệu */
+	font-weight: bold;
+	/** Áp dụng màu xanh neon đại diện cho logo */
+	color: var(--primary);
+}
+
+/* NAV (MENU LIÊN KẾT) */
+.nav-links {
+	/** Kích hoạt Flexbox để các hàng menu liên kết (Trang chủ, Sản phẩm,...) nằm ngang hàng nhau */
+	display: flex;
+	/** Xóa bỏ các dấu chấm tròn đen mặc định đứng đầu của danh sách thẻ li */
+	list-style: none;
+	/** Tạo khoảng cách đều đặn 20px giữa các mục menu liên kết */
+	gap: 20px;
+}
+
+.nav-links a {
+	/** Đặt vị trí tương đối để làm tâm điểm định vị cho thanh gạch chân ảo bên dưới */
+	position: relative;
+}
+
+/** Phần tử ảo tạo hiệu ứng đường gạch chân nằm ẩn dưới mỗi chữ Menu */
+.nav-links a::after {
+	/** Bắt buộc phải có thuộc tính content để phần tử ảo hoạt động */
+	content: "";
+	/** Định vị tuyệt đối dựa theo chữ menu tương ứng */
+	position: absolute;
+	/** Ban đầu chiều rộng bằng 0% để giấu thanh gạch chân đi */
+	width: 0%;
+	/** Độ dày của đường gạch chân là 2px */
+	height: 2px;
+	/** Màu sắc của đường gạch chân sử dụng màu xanh neon */
+	background: var(--primary);
+	/** Căn sát lề trái của chữ menu */
+	left: 0;
+	/** Đẩy đường gạch chân nằm thụt xuống phía dưới chữ menu 5px */
+	bottom: -5px;
+	/** Hiệu ứng chuyển động mượt mà trong 0.3 giây khi thanh gạch dài ra */
+	transition: 0.3s;
+}
+
+/** Hiệu ứng xuất hiện thanh gạch chân khi người dùng di chuột vào chữ Menu */
+.nav-links a:hover::after {
+	/** Chiều rộng tăng lên 100% bằng chiều rộng của chữ menu, kết hợp transition tạo cảm giác đường kẻ chạy từ trái sang phải */
+	width: 100%;
+}
+
+/* ==========================================================================
+   4. HERO (BANNER CHÀO MỪNG / KHUYẾN MÃI)
+   ========================================================================== */
+.hero {
+	/** Áp dụng màu nền chuyển sắc gradient xanh mướt làm banner bừng sáng */
+	background: var(--gradient);
+	/** Màu chữ tiêu đề và mô tả trong banner là màu trắng */
+	color: white;
+	/** Căn giữa toàn bộ nội dung văn bản trong banner */
+	text-align: center;
+	/** Tạo khoảng cách đệm thông thoáng: Trên dưới 80px, Trái phải 20px */
+	padding: 80px 20px;
+	/** Thiết kế bo tròn mềm mại cho 2 góc nằm ở phía đáy của tấm banner */
+	border-radius: 0 0 40px 40px;
+}
+
+.hero h1 {
+	/** Phóng tiêu đề khẩu hiệu lớn lên kích thước 40px tạo sự chú ý mạnh */
+	font-size: 40px;
+	/** Tạo khoảng cách lề dưới 10px để không bị dính vào dòng mô tả nhỏ */
+	margin-bottom: 10px;
+}
+
+.hero p {
+	/** Cỡ chữ dòng mô tả phụ vừa phải 18px */
+	font-size: 18px;
+	/** Tạo khoảng cách lề dưới 20px để đẩy nút bấm (Button) bên dưới cách xa ra */
+	margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   5. BUTTON (NÚT BẤM MUA HÀNG / TƯƠNG TÁC)
+   ========================================================================== */
+.btn {
+	/** Cho phép nút bấm căn chỉnh kích thước width/height mượt mà nhưng vẫn nằm cùng hàng chữ */
+	display: inline-block;
+	/** Nền của nút sử dụng màu chuyển sắc gradient rực rỡ */
+	background: var(--gradient);
+	/** Chữ hiển thị bên trong nút bấm có màu trắng */
+	color: white;
+	/** Khoảng cách đệm tạo form dáng cho nút: Trên dưới 12px, Trái phải rộng 20px */
+	padding: 12px 20px;
+	/** Bo tròn xoe hai đầu nút bấm thành hình viên nhộng (25px) cực kỳ hiện đại */
+	border-radius: 25px;
+	/** Xóa bỏ viền đen thô cứng mặc định của nút bấm */
+	border: none;
+	/** Đổi hình dáng con trỏ chuột thành hình bàn tay chỉ ngón khi di chuột vào nút, báo hiệu bấm được */
+	cursor: pointer;
+	/** Làm chữ trong nút đậm lên để tăng tính điều hướng người dùng */
+	font-weight: bold;
+	/** Giúp mọi chuyển động của nút (như nhích lên, đổi bóng) diễn ra mượt mà trong 0.3 giây */
+	transition: 0.3s;
+}
+
+/** Hiệu ứng nổi bật khi di chuột vào nút bấm */
+.btn:hover {
+	/** Đẩy nút bấm nhích nhẹ lên phía trên 2px tạo cảm giác nút có độ đàn hồi */
+	transform: translateY(-2px);
+	/** Đổ thêm một lớp bóng màu xanh tỏa rộng ra xung quanh, làm cho nút bấm như đang phát sáng */
+	box-shadow: 0 8px 20px rgba(0, 191, 255, 0.4);
+}
+
+/* ==========================================================================
+   6. PRODUCT GRID (KHUNG LƯỚI HIỂN THỊ DANH SÁCH SẢN PHẨM)
+   ========================================================================== */
+.product-container {
+	/** Tạo khoảng cách lề: Trên dưới cách 40px để giãn các khối, Trái phải tự động căn giữa */
+	margin: 40px auto;
+}
+
+.product-grid {
+	/** KÍCH HOẠT CSS GRID: Công nghệ phân chia layout dạng lưới ma trận hiện đại nhất */
+	display: grid;
+	/** TỰ ĐỘNG RESPONSIVE: Trình duyệt tự tính toán số cột. Mỗi cột rộng tối thiểu 250px và tự co giãn đều nhau (1fr) dựa theo độ rộng màn hình */
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	/** Tạo khoảng cách rãnh đồng đều 30px giữa các hàng và các cột sản phẩm, không bị dính vào nhau */
+	gap: 30px;
+}
+
+/* CARD (HỘP CHỨA TỪNG SẢN PHẨM RIÊNG BIỆT) */
+.product-card {
+	/** Sử dụng màu nền trắng tinh khôi làm nổi bật vỏ lon nước ngọt */
+	background: var(--bg-card);
+	/** Bo tròn 4 góc của hộp sản phẩm 15px nhìn rất gọn gàng và thẩm mỹ */
+	border-radius: 15px;
+	/** Tạo không gian đệm 20px bên trong hộp để hình ảnh và chữ không dính sát viền */
+	padding: 20px;
+	/** Căn giữa toàn bộ hình ảnh, tên và giá tiền của sản phẩm */
+	text-align: center;
+	/** Áp dụng bóng đổ mờ nhẹ nhàng ở trạng thái đứng yên ban đầu */
+	box-shadow: var(--shadow-soft);
+	/** Tạo hiệu ứng chuyển động mượt mà 0.3 giây cho tất cả các thay đổi khi hover */
+	transition: 0.3s;
+}
+
+/** HIỆU ỨNG BAY LÊN: Kích hoạt khi di chuột vào một hộp sản phẩm bất kỳ */
+.product-card:hover {
+	/** Đồng thời nhấc hộp sản phẩm bay lên trên 10px (translateY) và phóng to nhẹ lên 1.02 lần (scale) */
+	transform: translateY(-10px) scale(1.02);
+	/** Thay thế bằng lớp bóng đổ đậm đà, vệt sáng xanh giúp sản phẩm trông nổi hẳn lên bề mặt màn hình */
+	box-shadow: var(--shadow-hover);
+}
+
+/* IMAGE (HÌNH ẢNH SẢN PHẨM) */
+.product-image {
+	/** Ép chiều rộng của bức ảnh luôn chiếm vừa vặn 100% không gian hộp chứa */
+	width: 100%;
+	/** Giới hạn chiều cao cố định của ảnh là 180px để các hộp sản phẩm luôn cao bằng nhau */
+	height: 180px;
+	/** CHỐNG MÉO HÌNH: Ảnh sản phẩm tự co giãn vừa vặn vào khung, không bao giờ bị dãn hay bóp méo hình lon nước */
+	object-fit: contain;
+	/** Tạo khoảng cách lề dưới 15px để đẩy tên sản phẩm xuống phía dưới */
+	margin-bottom: 15px;
+}
+
+/* TEXT (THÔNG TIN CHỮ CỦA SẢN PHẨM) */
+.product-title {
+	/** Cỡ chữ tên sản phẩm đạt mức 18px giúp người mua nhìn rõ ràng */
+	font-size: 18px;
+	/** Tạo khoảng cách lề dưới 10px để tách biệt với phần hiển thị giá tiền */
+	margin-bottom: 10px;
+}
+
+.product-price {
+	/** Phóng cỡ chữ giá tiền lớn lên 20px giúp đập ngay vào mắt người xem */
+	font-size: 20px;
+	/** Làm đậm số tiền để tạo sự nhấn mạnh */
+	font-weight: bold;
+	/** Áp dụng tông màu đỏ rực rỡ mang tính kích thích hành vi mua sắm */
+	color: var(--danger);
+	/** Tạo khoảng cách lề dưới 15px để đẩy nút bấm "Thêm vào giỏ" xuống dưới thông thoáng */
+	margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   7. FOOTER (CHÂN TRANG KHU VỰC DƯỚI CÙNG)
+   ========================================================================== */
+footer {
+	/** Sử dụng màu nền xanh đại dương sẫm đồng bộ với thanh Header đầu trang */
+	background: var(--dark);
+	/** Màu chữ thông tin bản quyền là màu trắng nhưng được làm mờ nhẹ đi một chút (0.8) */
+	color: rgba(255, 255, 255, 0.8);
+	/** Căn chữ bản quyền nằm chính giữa dòng chân trang */
+	text-align: center;
+	/** Tạo khoảng cách đệm trên dưới 30px, trái phải 20px cho khối chân trang */
+	padding: 30px 20px;
+	/** Tạo khoảng cách lề trên 60px để đẩy footer tách biệt hoàn toàn với vùng sản phẩm phía trên */
+	margin-top: 60px;
+	/** Thu nhỏ cỡ chữ thông tin bản quyền xuống 14px vì đây là thông tin phụ */
+	font-size: 14px;
+}
+
+/* ==========================================================================
+   8. EFFECTS (HIỆU ỨNG TƯƠNG TÁC TOÀN TRANG)
+   ========================================================================== */
+html {
+	/** CUỘN CHUỘT MƯỢT MÀ: Khi bấm vào các liên kết nhảy vùng (Anchor link), màn hình sẽ từ từ lướt êm ái xuống chứ không bị giật khựng lập tức */
+	scroll-behavior: smooth;
+}
+
+/** Hiệu ứng phản hồi vật lý khi người dùng click chuột trực tiếp vào nút bấm */
+button:active {
+	/** Thu nhỏ nút bấm nhẹ về mức 0.97 lần ngay tại khoảnh khắc bấm chuột, tạo cảm giác như đang ấn vào một nút bấm thật ngoài đời */
+	transform: scale(0.97);
+}
+
+/* ==========================================================================
+   9. RESPONSIVE (TƯƠNG THÍCH TRÊN THIẾT BỊ DI ĐỘNG & MÁY TÍNH BẢNG)
+   ========================================================================== */
+/** Quy tắc CSS này chỉ được kích hoạt khi website mở trên thiết bị có độ rộng màn hình nhỏ hơn hoặc bằng 768px (Mobile & Tablet) */
+@media (max-width: 768px) {
+	.hero h1 {
+		/** Thu nhỏ cỡ chữ tiêu đề banner xuống còn 28px để chữ không bị tràn hoặc quá to trên màn hình điện thoại nhỏ */
+		font-size: 28px;
+	}
+
+	.nav-links {
+		/** ẨN MENU CHỮ: Do không gian màn hình điện thoại rất hẹp, ẩn thanh menu chữ đi để tránh lỗi hiển thị đè chữ lên nhau */
+		display: none;
+	}
+}
