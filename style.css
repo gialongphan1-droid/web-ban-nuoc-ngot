@@ -292,18 +292,69 @@ header {
    7. FOOTER (CHÂN TRANG KHU VỰC DƯỚI CÙNG)
    ========================================================================== */
 footer {
-	/** Sử dụng màu nền xanh đại dương sẫm đồng bộ với thanh Header đầu trang */
 	background: var(--dark);
-	/** Màu chữ thông tin bản quyền là màu trắng nhưng được làm mờ nhẹ đi một chút (0.8) */
 	color: rgba(255, 255, 255, 0.8);
-	/** Căn chữ bản quyền nằm chính giữa dòng chân trang */
-	text-align: center;
-	/** Tạo khoảng cách đệm trên dưới 30px, trái phải 20px cho khối chân trang */
-	padding: 30px 20px;
-	/** Tạo khoảng cách lề trên 60px để đẩy footer tách biệt hoàn toàn với vùng sản phẩm phía trên */
+	/* Tăng padding phía trên lên 60px để thoáng các cột */
+	padding: 60px 20px 20px 20px;
 	margin-top: 60px;
-	/** Thu nhỏ cỡ chữ thông tin bản quyền xuống 14px vì đây là thông tin phụ */
 	font-size: 14px;
+}
+
+/** Khung chứa dùng để kích hoạt Grid chia 4 cột cho Footer */
+.footer-container {
+	display: grid;
+	/* Tự động chia cột: Tối đa 4 cột trên PC và tự co về 1 cột trên điện thoại */
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 40px;
+	margin-bottom: 40px;
+}
+
+.footer-col h3 {
+	color: white;
+	font-size: 18px;
+	margin-bottom: 15px;
+	position: relative;
+}
+
+/* Đường gạch chân nhỏ trang trí dưới tiêu đề mỗi cột */
+.footer-col h3::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -6px;
+	width: 35px;
+	height: 2px;
+	background: var(--primary);
+}
+
+.footer-text {
+	color: rgba(255, 255, 255, 0.7);
+	margin-bottom: 10px;
+}
+
+.footer-links {
+	list-style: none;
+}
+
+.footer-links li {
+	margin-bottom: 10px;
+}
+
+/* Hiệu ứng hover dịch chuyển chữ nhẹ nhàng ở footer */
+.footer-links a {
+	transition: 0.2s;
+}
+
+.footer-links a:hover {
+	color: var(--primary);
+	padding-left: 5px;
+}
+
+/* Khối chứa dòng copyright đáy cùng */
+.footer-bottom {
+	text-align: center;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	padding-top: 20px;
 }
 
 /* ==========================================================================
