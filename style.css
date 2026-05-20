@@ -155,8 +155,11 @@ header {
    4. HERO (BANNER CHÀO MỪNG / KHUYẾN MÃI)
    ========================================================================== */
 .hero {
-	/** Áp dụng màu nền chuyển sắc gradient xanh mướt làm banner bừng sáng */
-	background: var(--gradient);
+	/** Áp dụng màu nền của tấm banner là hình ảnh banner.png đã chuẩn bị sẵn trong thư mục asset */
+	background-image: url("asset/banner.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 	/** Màu chữ tiêu đề và mô tả trong banner là màu trắng */
 	color: white;
 	/** Căn giữa toàn bộ nội dung văn bản trong banner */
@@ -180,7 +183,6 @@ header {
 	/** Tạo khoảng cách lề dưới 20px để đẩy nút bấm (Button) bên dưới cách xa ra */
 	margin-bottom: 20px;
 }
-
 
 /* ==========================================================================
    5. BUTTON (NÚT BẤM MUA HÀNG / TƯƠNG TÁC)
