@@ -1,44 +1,41 @@
-// Đợi cho toàn bộ giao diện HTML tải xong thì mới chạy code Javascript bên trong
 document.addEventListener("DOMContentLoaded", function () {
-	// 1. Khởi tạo mảng lưu trữ danh sách sản phẩm trong giỏ hàng
-	// Mỗi sản phẩm sẽ là một đối tượng có cấu trúc: { id, title, price, image }
-	let cartItems = [];
+	// 1. KHỞI TẠO BỘ NHỚ GIỎ HÀNG (Lấy rác cũ ra hoặc tạo mảng mới)
+	let cartItems = JSON.parse(localStorage.getItem("lingstong_cart")) || [];
 
-	// 2. Tìm các nút bấm trên giao diện có sẵn
-	const cartButton = document.querySelector("header .btn");
-	const heroButton = document.querySelector(".hero .btn");
-	const addToCartButtons = document.querySelectorAll(".product-card .btn");
+	// 2. Tìm chính xác nút Giỏ hàng trên Header (.btn-cart)
+	const cartButton = document.querySelector(".btn-cart");
 
-	// Tự động tạo cấu trúc HTML cho Cửa sổ Giỏ hàng (Modal) bằng JS và chèn vào cuối trang web
-	const modalMarkup = `
-        <div id="cartModal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: none; justify-content: center; align-items: center; z-index: 10000; transition: opacity 0.3s ease;">
-            <div style="background: #ffffff; width: 90%; max-width: 500px; border-radius: 15px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); position: relative; max-height: 80vh; display: flex; flex-direction: column;">
-                <span id="closeModal" style="position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; color: #57606f; font-weight: bold;">&times;</span>
-                <h2 style="color: #0a3d62; margin-bottom: 20px; border-bottom: 2px solid #00bfff; padding-bottom: 10px;">Giỏ Hàng Của Bạn</h2>
-                
-                <!-- Khu vực hiển thị danh sách sản phẩm -->
-                <div id="modalCartList" style="overflow-y: auto; flex-grow: 1; margin-bottom: 20px; padding-right: 5px;">
-                    <!-- Các món ăn/nước ngọt sẽ được tự động đổ vào đây bằng JS -->
-                </div>
+	// 3. TỰ ĐỘNG BƠM KHUNG NỔI (MODAL) GIỎ HÀNG VÀO ĐÁY TRANG TRÌNH DUYỆT
+	if (!document.getElementById("cartModal")) {
+		const modalMarkup = `
+            <div id="cartModal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: none; justify-content: center; align-items: center; z-index: 10000; transition: opacity 0.3s ease;">
+                <div style="background: #ffffff; width: 90%; max-width: 500px; border-radius: 15px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); position: relative; max-height: 80vh; display: flex; flex-direction: column;">
+                    <span id="closeModal" style="position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; color: #57606f; font-weight: bold;">&times;</span>
+                    <h2 style="color: #0a3d62; margin-bottom: 20px; border-bottom: 2px solid #00bfff; padding-bottom: 10px; font-family: sans-serif;">Giỏ Hàng Của Bạn</h2>
+                    
+                    <div id="modalCartList" style="overflow-y: auto; flex-grow: 1; margin-bottom: 20px; padding-right: 5px;"></div>
 
-                <!-- Tổng tiền & Nút thanh toán toán -->
-                <div style="border-top: 1px solid #e0e6ed; padding-top: 15px; display: flex; justify-content: space-between; align-items: center; font-weight: bold; font-size: 18px; color: #0a3d62;">
-                    <span>Tổng cộng:</span>
-                    <span id="modalTotalCartPrice">0 đ</span>
+                    <div style="border-top: 1px solid #e0e6ed; padding-top: 15px; display: flex; justify-content: space-between; align-items: center; font-weight: bold; font-size: 18px; color: #0a3d62; margin-bottom: 15px; font-family: sans-serif;">
+                        <span>Tổng cộng:</span>
+                        <span id="modalTotalCartPrice">0 đ</span>
+                    </div>
+
+                    <button style="background: #0a3d62; color: #fff; border: none; padding: 12px; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 16px; width: 100%;" onclick="alert('Tính năng thanh toán đang được phát triển!')">Tiến Hành Thanh Toán</button>
                 </div>
             </div>
-        </div>
-    `;
-	document.body.insertAdjacentHTML("beforeend", modalMarkup);
+        `;
+		document.body.insertAdjacentHTML("beforeend", modalMarkup);
+	}
 
-	// Lấy các phần tử Modal vừa được chèn vào HTML để tương tác
 	const cartModal = document.getElementById("cartModal");
-	const closeModal = document.getElementById("closeModal");
 	const modalCartList = document.getElementById("modalCartList");
 	const modalTotalCartPrice = document.getElementById("modalTotalCartPrice");
 
+	// Ép làm mới số liệu hiển thị lên thanh header ngay khi mở web
+	renderCartView();
+
 	/**
-	 * Hàm hiển thị thông báo thêm/xóa thành công (Toast Notification)
+	 * Hàm vẽ bảng thông báo Toast màu xanh / đỏ nổi lên góc màn hình
 	 */
 	function showNotification(message, isDanger = false) {
 		const notification = document.createElement("div");
@@ -47,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			position: "fixed",
 			top: "80px",
 			right: "20px",
-			backgroundColor: isDanger ? "#ff4757" : "#2ed573", // Màu đỏ nếu xóa, màu xanh nếu thêm
+			backgroundColor: isDanger ? "#ff4757" : "#2ed573",
 			color: "#ffffff",
 			padding: "12px 25px",
 			borderRadius: "8px",
@@ -57,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			transition: "all 0.4s ease",
 			opacity: "0",
 			transform: "translateY(-20px)",
+			fontFamily: "sans-serif",
 		});
 		document.body.appendChild(notification);
 		setTimeout(() => {
@@ -66,40 +64,50 @@ document.addEventListener("DOMContentLoaded", function () {
 		setTimeout(() => {
 			notification.style.opacity = "0";
 			notification.style.transform = "translateY(-20px)";
-			setTimeout(() => {
-				notification.remove();
-			}, 400);
+			setTimeout(() => notification.remove(), 400);
 		}, 2500);
 	}
 
 	/**
-	 * Hàm đồng bộ và cập nhật lại giao diện số lượng trên Header + danh sách trong Modal
+	 * Hàm vẽ giao diện giỏ hàng bên trong hộp Modal và đếm tổng số lượng sản phẩm
 	 */
 	function renderCartView() {
-		// 1. Cập nhật số lượng trên nút Header
+		const totalQuantity = cartItems.reduce(
+			(sum, item) => sum + item.quantity,
+			0,
+		);
+
+		// Đếm số lượng cập nhật vào Header
 		if (cartButton) {
-			cartButton.textContent = `Giỏ hàng (${cartItems.length})`;
+			const counterSpan =
+				document.getElementById("cart-counter") ||
+				cartButton.querySelector("span");
+			if (counterSpan) {
+				counterSpan.textContent = totalQuantity;
+			} else {
+				cartButton.textContent = `Giỏ hàng (${totalQuantity})`;
+			}
 		}
 
-		// 2. Xóa sạch danh sách cũ trong Modal để chuẩn bị nạp dữ liệu mới nhất
+		if (!modalCartList) return;
 		modalCartList.innerHTML = "";
 
-		// Kiểm tra nếu giỏ hàng trống rỗng
 		if (cartItems.length === 0) {
-			modalCartList.innerHTML = `<p style="text-align: center; color: #57606f; margin-top: 20px; font-style: italic;">Giỏ hàng của bạn đang trống.</p>`;
+			modalCartList.innerHTML = `<p style="text-align: center; color: #57606f; margin-top: 20px; font-style: italic; font-family: sans-serif;">Giỏ hàng của bạn đang trống.</p>`;
 			modalTotalCartPrice.textContent = "0 đ";
 			return;
 		}
 
 		let totalPrice = 0;
 
-		// 3. Duyệt mảng sản phẩm hiện có và tạo các thẻ hiển thị tương ứng
 		cartItems.forEach((item, index) => {
-			// Chuyển đổi định dạng giá tiền từ text sang số để tính tổng tiền
-			const cleanPrice = parseInt(
-				item.price.replace(/\./g, "").replace("đ", "").trim(),
-			);
-			totalPrice += cleanPrice;
+			// Chuẩn hóa và làm sạch chuỗi tiền tệ (ví dụ "10.000 đ" thành số 10000)
+			let rawPrice = String(item.price || "0");
+			const cleanPrice =
+				parseInt(rawPrice.replace(/\./g, "").replace("đ", "").trim()) || 0;
+
+			const itemTotal = cleanPrice * item.quantity;
+			totalPrice += itemTotal;
 
 			const itemRow = document.createElement("div");
 			Object.assign(itemRow.style, {
@@ -109,132 +117,118 @@ document.addEventListener("DOMContentLoaded", function () {
 				padding: "10px 0",
 				borderBottom: "1px solid #f1f2f6",
 				gap: "10px",
+				fontFamily: "sans-serif",
 			});
 
 			itemRow.innerHTML = `
                 <div style="display: flex; align-items: center; gap: 15px;">
                     <img src="${item.image}" alt="${item.title}" style="width: 50px; height: 50px; object-fit: contain; background: #f4f7f9; border-radius: 8px; padding: 4px;">
                     <div>
-                        <h4 style="color: #0a3d62; font-size: 15px; margin-bottom: 2px;">${item.title}</h4>
-                        <span style="color: #ff4757; font-weight: bold; font-size: 14px;">${item.price}</span>
+                        <h4 style="color: #0a3d62; font-size: 15px; margin-bottom: 2px; margin-top: 0;">${item.title}</h4>
+                        <span style="color: #ff4757; font-weight: bold; font-size: 14px;">${cleanPrice.toLocaleString("vi-VN")} đ <span style="color:#666; font-weight:normal; font-size:12px;">x${item.quantity}</span></span>
                     </div>
                 </div>
-                <button class="delete-item-btn" data-index="${index}" style="background: none; border: 1px solid #ff4757; color: #ff4757; padding: 5px 10px; border-radius: 15px; font-size: 12px; cursor: pointer; font-weight: bold; transition: all 0.2s;">Xóa</button>
+                <button class="delete-item-btn" data-index="${index}" style="background: none; border: 1px solid #ff4757; color: #ff4757; padding: 5px 10px; border-radius: 15px; font-size: 12px; cursor: pointer; font-weight: bold;">Xóa</button>
             `;
-
-			// Thêm hiệu ứng hover đổi màu cho nút xóa của từng món
-			const delBtn = itemRow.querySelector(".delete-item-btn");
-			delBtn.addEventListener("mouseenter", () => {
-				delBtn.style.backgroundColor = "#ff4757";
-				delBtn.style.color = "white";
-			});
-			delBtn.addEventListener("mouseleave", () => {
-				delBtn.style.backgroundColor = "transparent";
-				delBtn.style.color = "#ff4757";
-			});
-
-			// Gắn sự kiện xóa khi bấm nút
-			delBtn.addEventListener("click", function () {
-				const itemIndex = parseInt(this.getAttribute("data-index"));
-				const removedItemTitle = cartItems[itemIndex].title;
-
-				// Xóa sản phẩm ra khỏi mảng cartItems
-				cartItems.splice(itemIndex, 1);
-
-				// Vẽ lại giao diện giỏ hàng mới
-				renderCartView();
-
-				// Hiển thị thông báo cảnh báo xóa thành công màu đỏ
-				showNotification(`🗑️ Đã xóa ${removedItemTitle} khỏi giỏ hàng.`, true);
-			});
-
 			modalCartList.appendChild(itemRow);
 		});
 
-		// Cập nhật lại tổng tiền (Định dạng lại dấu chấm phần nghìn Việt Nam Đồng)
 		modalTotalCartPrice.textContent = totalPrice.toLocaleString("vi-VN") + " đ";
 	}
 
 	/**
-	 * Hàm xử lý khi thêm sản phẩm mới
+	 * Hàm tiếp nhận thông tin bốc từ HTML đẩy vào trong mảng dữ liệu LocalStorage
 	 */
 	function addItemToCart(title, price, image) {
-		// Đẩy thông tin sản phẩm mới vào mảng dữ liệu gốc
-		cartItems.push({ title, price, image });
-
-		// Gọi hàm đồng bộ giao diện toàn trang
-		renderCartView();
-
-		// Hiệu ứng nảy nhẹ nút giỏ hàng trên header
-		if (cartButton) {
-			cartButton.style.transform = "scale(1.15)";
-			setTimeout(() => {
-				cartButton.style.transform = "scale(1)";
-			}, 150);
+		const existingItem = cartItems.find((item) => item.title === title);
+		if (existingItem) {
+			existingItem.quantity += 1;
+		} else {
+			cartItems.push({ title, price, image, quantity: 1 });
 		}
+
+		localStorage.setItem("lingstong_cart", JSON.stringify(cartItems));
+		renderCartView();
 	}
 
-	// 3. Lắng nghe sự kiện click cho các nút "Thêm vào giỏ" ở từng sản phẩm
-	addToCartButtons.forEach(function (button) {
-		button.addEventListener("click", function () {
-			const productCard = button.parentElement;
-			const title = productCard.querySelector(".product-title").textContent;
-			const price = productCard.querySelector(".product-price").textContent;
-			const image = productCard
-				.querySelector(".product-image")
-				.getAttribute("src");
+	// ==========================================================================
+	// 🌟 KHU VỰC EVENT DELEGATION LẮNG NGHE CLICK CHUNG TOÀN TRANG
+	// ==========================================================================
+	document.body.addEventListener("click", function (event) {
+		const target = event.target;
+
+		// Hành động 1: Click nút "Thêm vào giỏ" ở trang chủ hoặc trang sản phẩm
+		const btnAddToCart = target.closest(".add-to-cart-btn");
+		if (btnAddToCart) {
+			event.preventDefault();
+
+			const productCard = btnAddToCart.closest(".product-card");
+			if (!productCard) return;
+
+			const titleEl = productCard.querySelector(".product-title");
+			const priceEl = productCard.querySelector(".product-price");
+			const imgEl = productCard.querySelector(".product-image");
+
+			if (!titleEl || !priceEl) return;
+
+			const title = titleEl.textContent.trim();
+			const price = priceEl.textContent.trim();
+			const image = imgEl ? imgEl.getAttribute("src") : "assets/sting-do.png";
 
 			addItemToCart(title, price, image);
 			showNotification(`🎉 Đã thêm thành công ${title} vào giỏ hàng!`);
-		});
-	});
+			return;
+		}
 
-	// 4. Lắng nghe sự kiện click cho nút "Mua Ngay Bản Giới Hạn" ở Banner Hero
-	if (heroButton) {
-		heroButton.addEventListener("click", function () {
-			// Mua ngay bản giới hạn sẽ mặc định lấy lon Sting cao cấp nhất làm đại diện
+		// Hành động 2: Click vào nút bấm "Mua Ngay Bản Giới Hạn" trên banner lớn của trang chủ
+		const btnHeroLimited = target.closest(".hero-btn-limited");
+		if (btnHeroLimited) {
+			event.preventDefault();
 			addItemToCart(
 				"Sting - Vị nhân sâm cao cấp",
 				"15.000 đ",
 				"assets/sting-max-gold.png",
 			);
 			showNotification("🚀 Đã thêm phiên bản giới hạn vào giỏ hàng!");
-		});
-	}
+			return;
+		}
 
-	// ==========================================================================
-	// CÁC SỰ KIỆN ĐÓNG / MỞ CỬA SỔ GIỎ HÀNG (MODAL LOGIC)
-	// ==========================================================================
+		// Hành động 3: Click xóa từng dòng sản phẩm trong bảng giỏ hàng
+		const btnDelete = target.closest(".delete-item-btn");
+		if (btnDelete) {
+			const itemIndex = parseInt(btnDelete.getAttribute("data-index"));
+			const removedItemTitle = cartItems[itemIndex].title;
 
-	// Mở giỏ hàng khi nhấn vào nút Giỏ hàng trên Header
-	if (cartButton) {
-		cartButton.addEventListener("click", function (e) {
-			e.preventDefault(); // Ngăn trình duyệt load lại trang nếu có
-			cartModal.style.display = "flex";
-			// Kích hoạt nhẹ độ mờ để làm mượt chuyển động xuất hiện
-			setTimeout(() => {
-				cartModal.style.opacity = "1";
-			}, 10);
-		});
-	}
+			cartItems.splice(itemIndex, 1);
+			localStorage.setItem("lingstong_cart", JSON.stringify(cartItems));
 
-	// Đóng giỏ hàng khi nhấn vào dấu X thần thánh
-	if (closeModal) {
-		closeModal.addEventListener("click", function () {
-			cartModal.style.opacity = "0";
-			setTimeout(() => {
-				cartModal.style.display = "none";
-			}, 300);
-		});
-	}
-
-	// Đóng giỏ hàng nếu người dùng click trượt ra ngoài vùng màu đen mờ
-	window.addEventListener("click", function (event) {
-		if (event.target === cartModal) {
-			cartModal.style.opacity = "0";
-			setTimeout(() => {
-				cartModal.style.display = "none";
-			}, 300);
+			renderCartView();
+			showNotification(`🗑️ Đã xóa ${removedItemTitle} khỏi giỏ hàng.`, true);
+			return;
 		}
 	});
+
+	// ==========================================================================
+	// SỰ KIỆN KÍCH HOẠT ĐÓNG / MỞ CỬA SỔ GIỎ HÀNG
+	// ==========================================================================
+	if (cartButton) {
+		cartButton.addEventListener("click", function (e) {
+			e.preventDefault();
+			if (cartModal) {
+				cartModal.style.display = "flex";
+				setTimeout(() => (cartModal.style.opacity = "1"), 10);
+				renderCartView();
+			}
+		});
+	}
+
+	document.body.addEventListener("click", function (e) {
+		const target = e.target;
+		if (target.id === "closeModal" || target === cartModal) {
+			if (cartModal) {
+				cartModal.style.opacity = "0";
+				setTimeout(() => (cartModal.style.display = "none"), 300);
+			}
+		}
+	});s
 });
