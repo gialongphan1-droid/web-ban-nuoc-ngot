@@ -498,24 +498,30 @@ button:active {
 }
 
 /* --- TƯƠNG THÍCH ĐIỆN THOẠI (RESPONSIVE) --- */
+/* ==========================================================================
+   9. RESPONSIVE (TƯƠNG THÍCH TRÊN THIẾT BỊ DI ĐỘNG & MÁY TÍNH BẢNG)
+   ========================================================================== */
 @media (max-width: 768px) {
-	/* Chuyển thanh tìm kiếm và bộ lọc sang dạng hàng dọc cho dễ bấm trên màn hình nhỏ */
-	.filter-search-bar {
-		flex-direction: column;
-		align-items: stretch;
-		padding: 15px;
-	}
+    /* Cho phép header tự động xuống hàng hoặc thu nhỏ linh hoạt */
+    header {
+        flex-direction: column; /* Xếp dọc Logo, Menu và Giỏ hàng để không bị chật */
+        gap: 15px;              /* Tạo khoảng cách giữa các thành phần */
+        padding: 15px 2%;
+    }
 
-	.category-tabs {
-		justify-content: center;
-	}
+    .hero h1 {
+        font-size: 28px;
+    }
 
-	.tab-item {
-		width: 100%; /* Giúp các tab dãn đều dễ chạm */
-		text-align: center;
-	}
+    /* GIỮ LẠI MENU VÀ ĐỊNH DẠNG LẠI CHO ĐẸP TRÊN ĐIỆN THOẠI */
+    .nav-links {
+        display: flex;          /* Bật lại flexbox để hiện menu */
+        flex-wrap: wrap;        /* Nếu màn hình quá nhỏ thì tự động xuống hàng mượt mà */
+        justify-content: center;/* Căn giữa 4 thẻ a */
+        gap: 15px;              /* Thu hẹp khoảng cách giữa các chữ lại một chút (15px) */
+    }
 
-	.search-input {
-		min-width: 100%;
-	}
+    .nav-links a {
+        font-size: 14px;        /* Giảm nhẹ cỡ chữ một chút để vừa vặn màn hình nhỏ */
+    }
 }
