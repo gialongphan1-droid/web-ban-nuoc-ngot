@@ -1,0 +1,940 @@
+Folder PATH listing
+Volume serial number is 9091-BCC9
+C:\WAMP64\WWW\WEB\WEB-BAN-NU?C-NG?T\LABTHUCHANH
++---Lab1
+|   |   Lab01.rar
+|   |   
+|   \---Lab01
+|       \---Lab01
+|           \---Vi_du
+|               |   index.html
+|               |   lab1_bai4.html
+|               |   
+|               +---flashes
+|               +---images
+|               |   |   book-festival-banner.jpg
+|               |   |   bookstoreBanner.jpg
+|               |   |   factory_books_banner.jpg
+|               |   |   Sach.jpg
+|               |   |   Sach_2.jpg
+|               |   |   Sach_3.jpg
+|               |   |   Sach_4.png
+|               |   |   Sach_5.jpg
+|               |   |   Sach_6.jpg
+|               |   |   Sach_7.jpg
+|               |   |   Sach_8.png
+|               |   |   
+|               |   \---layout
+|               |           bar_bg.gif
+|               |           bg.jpg
+|               |           car.png
+|               |           cart.gif
+|               |           cart_bg.gif
+|               |           checked.png
+|               |           contact-new.png
+|               |           details_box_bottom.gif
+|               |           details_box_center.gif
+|               |           details_box_top.gif
+|               |           details_bt_bg.gif
+|               |           details_bt_bg.png
+|               |           favorites.gif
+|               |           favorites.png
+|               |           favs.gif
+|               |           favs.png
+|               |           footer_bg.gif
+|               |           header_bg.jpg
+|               |           header_divider.png
+|               |           home.png
+|               |           menu_bg.gif
+|               |           menu_divider.gif
+|               |           menu_left.gif
+|               |           menu_right.gif
+|               |           menu_title_bg.gif
+|               |           products_details_bg.gif
+|               |           product_box_bottom.gif
+|               |           product_box_center.gif
+|               |           product_box_top.gif
+|               |           search.gif
+|               |           services.png
+|               |           shoppingcart.png
+|               |           square-blue-add.gif
+|               |           top_search_bg.gif
+|               |           user_add.png
+|               |           
+|               +---scripts
+|               +---sounds
+|               +---styles
+|               |       main.css
+|               |       
+|               +---templates
+|               \---videos
++---Lab2
+|   |   LAB 02_fixed_v1.pdf
+|   |   Lab02.rar
+|   |   
+|   \---Lab02
+|       \---Lab02
+|           |   lab02_bai1_table.html
+|           |   lab02_bai2_table.html
+|           |   lab02_khung_table.html
+|           |   
+|           \---Vi_du_Lab01
+|               |   index.html
+|               |   
+|               +---flashes
+|               +---images
+|               |   |   bookstoreBanner.jpg
+|               |   |   Book_table_1.jpg
+|               |   |   Book_table_2.png
+|               |   |   Book_table_3.png
+|               |   |   Sach.jpg
+|               |   |   Sach_2.jpg
+|               |   |   Sach_3.jpg
+|               |   |   Sach_7.jpg
+|               |   |   Sach_8.png
+|               |   |   
+|               |   \---layout
+|               |           bar_bg.gif
+|               |           bg.jpg
+|               |           car.png
+|               |           cart.gif
+|               |           cart_bg.gif
+|               |           checked.png
+|               |           contact-new.png
+|               |           details_box_bottom.gif
+|               |           details_box_center.gif
+|               |           details_box_top.gif
+|               |           details_bt_bg.gif
+|               |           details_bt_bg.png
+|               |           favorites.gif
+|               |           favorites.png
+|               |           favs.gif
+|               |           favs.png
+|               |           footer_bg.gif
+|               |           header_bg.jpg
+|               |           header_divider.png
+|               |           home.png
+|               |           menu_bg.gif
+|               |           menu_divider.gif
+|               |           menu_left.gif
+|               |           menu_right.gif
+|               |           menu_title_bg.gif
+|               |           products_details_bg.gif
+|               |           product_box_bottom.gif
+|               |           product_box_center.gif
+|               |           product_box_top.gif
+|               |           search.gif
+|               |           services.png
+|               |           shoppingcart.png
+|               |           square-blue-add.gif
+|               |           top_search_bg.gif
+|               |           user_add.png
+|               |           
+|               +---scripts
+|               +---sounds
+|               +---styles
+|               |       main.css
+|               |       
+|               +---templates
+|               \---videos
++---Lab3
+|   |   Lab 03 B? SUNG.pdf
+|   |   LAB 03-fixed_v1.pdf
+|   |   Lab03.rar
+|   |   
+|   \---Lab03
+|       |   xl_lab03_bai3.php
+|       |   
+|       \---Lab03
+|           +---Vi_du
+|           |   |   index.html
+|           |   |   
+|           |   +---flashes
+|           |   +---images
+|           |   |   |   book-festival-banner.jpg
+|           |   |   |   bookstoreBanner.jpg
+|           |   |   |   Book_table_1.jpg
+|           |   |   |   Book_table_2.png
+|           |   |   |   Book_table_3.png
+|           |   |   |   factory_books_banner.jpg
+|           |   |   |   Sach.jpg
+|           |   |   |   Sach_2.jpg
+|           |   |   |   Sach_3.jpg
+|           |   |   |   Sach_4.png
+|           |   |   |   Sach_5.jpg
+|           |   |   |   Sach_6.jpg
+|           |   |   |   Sach_7.jpg
+|           |   |   |   Sach_8.png
+|           |   |   |   
+|           |   |   \---layout
+|           |   |           bar_bg.gif
+|           |   |           bg.jpg
+|           |   |           car.png
+|           |   |           cart.gif
+|           |   |           cart_bg.gif
+|           |   |           checked.png
+|           |   |           contact-new.png
+|           |   |           details_box_bottom.gif
+|           |   |           details_box_center.gif
+|           |   |           details_box_top.gif
+|           |   |           details_bt_bg.gif
+|           |   |           details_bt_bg.png
+|           |   |           favorites.gif
+|           |   |           favorites.png
+|           |   |           favs.gif
+|           |   |           favs.png
+|           |   |           footer_bg.gif
+|           |   |           header_bg.jpg
+|           |   |           header_divider.png
+|           |   |           home.png
+|           |   |           menu_bg.gif
+|           |   |           menu_divider.gif
+|           |   |           menu_left.gif
+|           |   |           menu_right.gif
+|           |   |           menu_title_bg.gif
+|           |   |           products_details_bg.gif
+|           |   |           product_box_bottom.gif
+|           |   |           product_box_center.gif
+|           |   |           product_box_top.gif
+|           |   |           search.gif
+|           |   |           services.png
+|           |   |           shoppingcart.png
+|           |   |           square-blue-add.gif
+|           |   |           top_search_bg.gif
+|           |   |           user_add.png
+|           |   |           
+|           |   +---scripts
+|           |   +---sounds
+|           |   +---styles
+|           |   |       main.css
+|           |   |       
+|           |   +---templates
+|           |   \---videos
+|           \---Vi_du_Lab01
+|               |   .DS_Store
+|               |   index.html
+|               |   lab03_bai1.html
+|               |   lab03_bai2.html
+|               |   
+|               +---flashes
+|               +---images
+|               |   |   book-festival-banner.jpg
+|               |   |   bookstoreBanner.jpg
+|               |   |   factory_books_banner.jpg
+|               |   |   Sach.jpg
+|               |   |   Sach_2.jpg
+|               |   |   Sach_3.jpg
+|               |   |   Sach_4.png
+|               |   |   Sach_5.jpg
+|               |   |   Sach_6.jpg
+|               |   |   Sach_7.jpg
+|               |   |   Sach_8.png
+|               |   |   
+|               |   \---layout
+|               |           bar_bg.gif
+|               |           bg.jpg
+|               |           car.png
+|               |           cart.gif
+|               |           cart_bg.gif
+|               |           checked.png
+|               |           contact-new.png
+|               |           details_box_bottom.gif
+|               |           details_box_center.gif
+|               |           details_box_top.gif
+|               |           details_bt_bg.gif
+|               |           details_bt_bg.png
+|               |           favorites.gif
+|               |           favorites.png
+|               |           favs.gif
+|               |           favs.png
+|               |           footer_bg.gif
+|               |           header_bg.jpg
+|               |           header_divider.png
+|               |           home.png
+|               |           menu_bg.gif
+|               |           menu_divider.gif
+|               |           menu_left.gif
+|               |           menu_right.gif
+|               |           menu_title_bg.gif
+|               |           products_details_bg.gif
+|               |           product_box_bottom.gif
+|               |           product_box_center.gif
+|               |           product_box_top.gif
+|               |           search.gif
+|               |           services.png
+|               |           shoppingcart.png
+|               |           square-blue-add.gif
+|               |           top_search_bg.gif
+|               |           user_add.png
+|               |           
+|               +---scripts
+|               +---sounds
+|               +---styles
+|               |       main.css
+|               |       
+|               +---templates
+|               \---videos
++---Lab4
+|   |   LAB 04-fixed_v1.pdf
+|   |   Lab04.rar
+|   |   
+|   \---Lab04
+|       \---Lab04
+|           \---Vi_du
+|               |   index.html
+|               |   lab04_bai1.html
+|               |   lab04_bai2.html
+|               |   lab04_bai3.html
+|               |   
+|               +---flashes
+|               +---images
+|               |   |   book-festival-banner.jpg
+|               |   |   bookstoreBanner.jpg
+|               |   |   book_9.png
+|               |   |   factory_books_banner.jpg
+|               |   |   Sach.jpg
+|               |   |   sach_10.jpg
+|               |   |   Sach_2.jpg
+|               |   |   Sach_3.jpg
+|               |   |   Sach_4.png
+|               |   |   Sach_5.jpg
+|               |   |   Sach_6.jpg
+|               |   |   Sach_7.jpg
+|               |   |   Sach_8.png
+|               |   |   
+|               |   \---layout
+|               |           bar_bg.gif
+|               |           bg.jpg
+|               |           car.png
+|               |           cart.gif
+|               |           cart_bg.gif
+|               |           checked.png
+|               |           contact-new.png
+|               |           details_box_bottom.gif
+|               |           details_box_center.gif
+|               |           details_box_top.gif
+|               |           details_bt_bg.gif
+|               |           details_bt_bg.png
+|               |           favorites.gif
+|               |           favorites.png
+|               |           favs.gif
+|               |           favs.png
+|               |           footer_bg.gif
+|               |           header_bg.jpg
+|               |           header_divider.png
+|               |           home.png
+|               |           menu_bg.gif
+|               |           menu_divider.gif
+|               |           menu_left.gif
+|               |           menu_right.gif
+|               |           menu_title_bg.gif
+|               |           products_details_bg.gif
+|               |           product_box_bottom.gif
+|               |           product_box_center.gif
+|               |           product_box_top.gif
+|               |           search.gif
+|               |           services.png
+|               |           shoppingcart.png
+|               |           square-blue-add.gif
+|               |           top_search_bg.gif
+|               |           user_add.png
+|               |           
+|               +---scripts
+|               +---sounds
+|               +---styles
+|               |       main.css
+|               |       
+|               +---templates
+|               \---videos
++---Lab5
+|   |   LAB 05-fixed_v1.pdf
+|   |   Lab 05_C…i_SCSS.pdf
+|   |   Lab05.zip
+|   |   
+|   \---Lab05
+|       +---Bai_2
+|       |   |   index.html
+|       |   |   
+|       |   +---css
+|       |   |       bootstrap.min.css
+|       |   |       elegant-icons.css
+|       |   |       font-awesome.min.css
+|       |   |       jquery-ui.min.css
+|       |   |       nice-select.css
+|       |   |       owl.carousel.min.css
+|       |   |       slicknav.min.css
+|       |   |       style.css
+|       |   |       
+|       |   +---flashes
+|       |   +---fonts
+|       |   |       ElegantIcons.eot
+|       |   |       ElegantIcons.svg
+|       |   |       ElegantIcons.ttf
+|       |   |       ElegantIcons.woff
+|       |   |       fontawesome-webfont.eot
+|       |   |       fontawesome-webfont.svg
+|       |   |       fontawesome-webfont.ttf
+|       |   |       fontawesome-webfont.woff
+|       |   |       fontawesome-webfont.woff2
+|       |   |       FontAwesome.otf
+|       |   |       
+|       |   +---img
+|       |   |   |   banner.jpg
+|       |   |   |   Book_1.jpg
+|       |   |   |   logo.png
+|       |   |   |   payment-item.png
+|       |   |   |   
+|       |   |   +---banner
+|       |   |   |       banner_1.jpg
+|       |   |   |       banner_2.jpg
+|       |   |   |       
+|       |   |   +---blog
+|       |   |   |       blog_1.jpg
+|       |   |   |       blog_2.jpg
+|       |   |   |       blog_3.jpg
+|       |   |   |       
+|       |   |   +---categories
+|       |   |   |       Book_1.jpg
+|       |   |   |       Book_2.jpg
+|       |   |   |       Book_3.jpg
+|       |   |   |       Book_4.jpg
+|       |   |   |       Book_5.jpg
+|       |   |   |       
+|       |   |   \---featured
+|       |   |           Book-3.png
+|       |   |           Book_1.webp
+|       |   |           Book_2.jpg
+|       |   |           Book_4.jpg
+|       |   |           Book_5.jpg
+|       |   |           Note_Book_1.jpg
+|       |   |           Pen_1.jpg
+|       |   |           Phu_Kien_1.jpg
+|       |   |           
+|       |   +---js
+|       |   |       bootstrap.min.js
+|       |   |       jquery-3.3.1.min.js
+|       |   |       jquery-ui.min.js
+|       |   |       jquery.nice-select.min.js
+|       |   |       jquery.slicknav.js
+|       |   |       main.js
+|       |   |       mixitup.min.js
+|       |   |       owl.carousel.min.js
+|       |   |       
+|       |   +---sass
+|       |   +---scripts
+|       |   +---sounds
+|       |   +---templates
+|       |   \---videos
+|       \---Vi_du
+|           |   index.html
+|           |   lab05_menu.html
+|           |   
+|           +---flashes
+|           +---images
+|           |   |   book-festival-banner.jpg
+|           |   |   bookstoreBanner.jpg
+|           |   |   book_9.png
+|           |   |   factory_books_banner.jpg
+|           |   |   Sach.jpg
+|           |   |   sach_10.jpg
+|           |   |   Sach_2.jpg
+|           |   |   Sach_3.jpg
+|           |   |   Sach_4.png
+|           |   |   Sach_5.jpg
+|           |   |   Sach_6.jpg
+|           |   |   Sach_7.jpg
+|           |   |   Sach_8.png
+|           |   |   
+|           |   \---layout
+|           |           bar_bg.gif
+|           |           bg.jpg
+|           |           car.png
+|           |           cart.gif
+|           |           cart_bg.gif
+|           |           checked.png
+|           |           contact-new.png
+|           |           details_box_bottom.gif
+|           |           details_box_center.gif
+|           |           details_box_top.gif
+|           |           details_bt_bg.gif
+|           |           details_bt_bg.png
+|           |           favorites.gif
+|           |           favorites.png
+|           |           favs.gif
+|           |           favs.png
+|           |           footer_bg.gif
+|           |           header_bg.jpg
+|           |           header_divider.png
+|           |           home.png
+|           |           menu_bg.gif
+|           |           menu_divider.gif
+|           |           menu_left.gif
+|           |           menu_right.gif
+|           |           menu_title_bg.gif
+|           |           products_details_bg.gif
+|           |           product_box_bottom.gif
+|           |           product_box_center.gif
+|           |           product_box_top.gif
+|           |           search.gif
+|           |           services.png
+|           |           shoppingcart.png
+|           |           square-blue-add.gif
+|           |           top_search_bg.gif
+|           |           user_add.png
+|           |           
+|           +---scripts
+|           +---sounds
+|           +---styles
+|           |       main.css
+|           |       
+|           +---templates
+|           \---videos
++---Lab6
+|   |   LAB 06-fixed_v1.pdf
+|   |   Lab06.rar
+|   |   
+|   \---Lab06
+|       +---Bai_2_Minh_hoa_layout
+|       |   |   index.html
+|       |   |   
+|       |   +---css
+|       |   |       style.css
+|       |   |       
+|       |   +---flashes
+|       |   +---fonts
+|       |   +---img
+|       |   |       img_01012024.jpg
+|       |   |       
+|       |   +---js
+|       |   |       main.js
+|       |   |       
+|       |   +---sass
+|       |   +---scripts
+|       |   +---sounds
+|       |   +---templates
+|       |   \---videos
+|       \---Vi_du
+|           |   index.html
+|           |   lab06_menu_responsive.html
+|           |   
+|           +---css
+|           |       bootstrap.min.css
+|           |       elegant-icons.css
+|           |       font-awesome.min.css
+|           |       jquery-ui.min.css
+|           |       nice-select.css
+|           |       owl.carousel.min.css
+|           |       slicknav.min.css
+|           |       style.css
+|           |       test.css
+|           |       
+|           +---flashes
+|           +---fonts
+|           |       ElegantIcons.eot
+|           |       ElegantIcons.svg
+|           |       ElegantIcons.ttf
+|           |       ElegantIcons.woff
+|           |       fontawesome-webfont.eot
+|           |       fontawesome-webfont.svg
+|           |       fontawesome-webfont.ttf
+|           |       fontawesome-webfont.woff
+|           |       fontawesome-webfont.woff2
+|           |       FontAwesome.otf
+|           |       
+|           +---img
+|           |   |   banner.jpg
+|           |   |   Book_1.jpg
+|           |   |   logo.png
+|           |   |   payment-item.png
+|           |   |   
+|           |   +---banner
+|           |   |       banner_1.jpg
+|           |   |       banner_2.jpg
+|           |   |       
+|           |   +---blog
+|           |   |       blog_1.jpg
+|           |   |       blog_2.jpg
+|           |   |       blog_3.jpg
+|           |   |       
+|           |   +---categories
+|           |   |       Book_1.jpg
+|           |   |       Book_2.jpg
+|           |   |       Book_3.jpg
+|           |   |       Book_4.jpg
+|           |   |       Book_5.jpg
+|           |   |       
+|           |   \---featured
+|           |           Book-3.png
+|           |           Book_1.webp
+|           |           Book_2.jpg
+|           |           Book_4.jpg
+|           |           Book_5.jpg
+|           |           Note_Book_1.jpg
+|           |           Pen_1.jpg
+|           |           Phu_Kien_1.jpg
+|           |           
+|           +---js
+|           |       bootstrap.min.js
+|           |       jquery-3.3.1.min.js
+|           |       jquery-ui.min.js
+|           |       jquery.nice-select.min.js
+|           |       jquery.slicknav.js
+|           |       main.js
+|           |       mixitup.min.js
+|           |       owl.carousel.min.js
+|           |       
+|           +---sass
+|           |       style.scss
+|           |       _footer.scss
+|           |       _responsive.scss
+|           |       
+|           +---scripts
+|           +---sounds
+|           +---templates
+|           \---videos
++---Lab7
+|   |   Extension_VS-Code_JS.png
+|   |   LAB 07_fixed_v1.pdf
+|   |   
+|   \---Lab07
+|       +---demo_bai_2
+|       |   |   index.html
+|       |   |   
+|       |   +---css
+|       |   |       bootstrap.min.css
+|       |   |       elegant-icons.css
+|       |   |       font-awesome.min.css
+|       |   |       jquery-ui.min.css
+|       |   |       nice-select.css
+|       |   |       owl.carousel.min.css
+|       |   |       slicknav.min.css
+|       |   |       style.css
+|       |   |       
+|       |   +---flashes
+|       |   +---fonts
+|       |   |       ElegantIcons.eot
+|       |   |       ElegantIcons.svg
+|       |   |       ElegantIcons.ttf
+|       |   |       ElegantIcons.woff
+|       |   |       fontawesome-webfont.eot
+|       |   |       fontawesome-webfont.svg
+|       |   |       fontawesome-webfont.ttf
+|       |   |       fontawesome-webfont.woff
+|       |   |       fontawesome-webfont.woff2
+|       |   |       FontAwesome.otf
+|       |   |       
+|       |   +---img
+|       |   |   |   banner.jpg
+|       |   |   |   Book_1.jpg
+|       |   |   |   logo.png
+|       |   |   |   payment-item.png
+|       |   |   |   
+|       |   |   +---banner
+|       |   |   |       banner_1.jpg
+|       |   |   |       banner_2.jpg
+|       |   |   |       
+|       |   |   +---blog
+|       |   |   |       blog_1.jpg
+|       |   |   |       blog_2.jpg
+|       |   |   |       blog_3.jpg
+|       |   |   |       
+|       |   |   +---categories
+|       |   |   |       Book_1.jpg
+|       |   |   |       Book_2.jpg
+|       |   |   |       Book_3.jpg
+|       |   |   |       Book_4.jpg
+|       |   |   |       Book_5.jpg
+|       |   |   |       
+|       |   |   \---featured
+|       |   |           Book-3.png
+|       |   |           Book_1.webp
+|       |   |           Book_2.jpg
+|       |   |           Book_4.jpg
+|       |   |           Book_5.jpg
+|       |   |           Note_Book_1.jpg
+|       |   |           Pen_1.jpg
+|       |   |           Phu_Kien_1.jpg
+|       |   |           
+|       |   +---js
+|       |   |       bootstrap.min.js
+|       |   |       jquery-3.3.1.min.js
+|       |   |       jquery-ui.min.js
+|       |   |       jquery.nice-select.min.js
+|       |   |       jquery.slicknav.js
+|       |   |       main.js
+|       |   |       mixitup.min.js
+|       |   |       owl.carousel.min.js
+|       |   |       
+|       |   +---sass
+|       |   |       style.scss
+|       |   |       _footer.scss
+|       |   |       _responsive.scss
+|       |   |       
+|       |   +---scripts
+|       |   +---sounds
+|       |   +---templates
+|       |   \---videos
+|       \---Vi_du
+|           |   index.html
+|           |   
+|           +---css
+|           |       bootstrap.min.css
+|           |       elegant-icons.css
+|           |       font-awesome.min.css
+|           |       jquery-ui.min.css
+|           |       nice-select.css
+|           |       owl.carousel.min.css
+|           |       slicknav.min.css
+|           |       style.css
+|           |       
+|           +---flashes
+|           +---fonts
+|           |       ElegantIcons.eot
+|           |       ElegantIcons.svg
+|           |       ElegantIcons.ttf
+|           |       ElegantIcons.woff
+|           |       fontawesome-webfont.eot
+|           |       fontawesome-webfont.svg
+|           |       fontawesome-webfont.ttf
+|           |       fontawesome-webfont.woff
+|           |       fontawesome-webfont.woff2
+|           |       FontAwesome.otf
+|           |       
+|           +---img
+|           |   |   banner.jpg
+|           |   |   Book_1.jpg
+|           |   |   logo.png
+|           |   |   payment-item.png
+|           |   |   
+|           |   +---banner
+|           |   |       banner_1.jpg
+|           |   |       banner_2.jpg
+|           |   |       
+|           |   +---blog
+|           |   |       blog_1.jpg
+|           |   |       blog_2.jpg
+|           |   |       blog_3.jpg
+|           |   |       
+|           |   +---categories
+|           |   |       Book_1.jpg
+|           |   |       Book_2.jpg
+|           |   |       Book_3.jpg
+|           |   |       Book_4.jpg
+|           |   |       Book_5.jpg
+|           |   |       
+|           |   \---featured
+|           |           Book-3.png
+|           |           Book_1.webp
+|           |           Book_2.jpg
+|           |           Book_4.jpg
+|           |           Book_5.jpg
+|           |           Note_Book_1.jpg
+|           |           Pen_1.jpg
+|           |           Phu_Kien_1.jpg
+|           |           
+|           +---js
+|           |       bootstrap.min.js
+|           |       jquery-3.3.1.min.js
+|           |       jquery-ui.min.js
+|           |       jquery.nice-select.min.js
+|           |       jquery.slicknav.js
+|           |       main.js
+|           |       mixitup.min.js
+|           |       owl.carousel.min.js
+|           |       
+|           +---sass
+|           |       style.scss
+|           |       _footer.scss
+|           |       _responsive.scss
+|           |       
+|           +---scripts
+|           +---sounds
+|           +---templates
+|           \---videos
+\---Lab8
+    |   LAB 08_fixed_v1.pdf
+    |   Lab 08_On_JS_form.pdf
+    |   Lab08.rar
+    |   
+    \---Lab08
+        +---img
+        |       slide_1.jpg
+        |       slide_2.jpg
+        |       slide_3.jpg
+        |       slide_4.png
+        |       slide_5.png
+        |       
+        +---Vi_du_1
+        |   |   index.html
+        |   |   
+        |   +---css
+        |   |       bootstrap.min.css
+        |   |       elegant-icons.css
+        |   |       font-awesome.min.css
+        |   |       jquery-ui.min.css
+        |   |       nice-select.css
+        |   |       owl.carousel.min.css
+        |   |       slicknav.min.css
+        |   |       style.css
+        |   |       
+        |   +---flashes
+        |   +---fonts
+        |   |       ElegantIcons.eot
+        |   |       ElegantIcons.svg
+        |   |       ElegantIcons.ttf
+        |   |       ElegantIcons.woff
+        |   |       fontawesome-webfont.eot
+        |   |       fontawesome-webfont.svg
+        |   |       fontawesome-webfont.ttf
+        |   |       fontawesome-webfont.woff
+        |   |       fontawesome-webfont.woff2
+        |   |       FontAwesome.otf
+        |   |       
+        |   +---img
+        |   |   |   banner.jpg
+        |   |   |   Book_1.jpg
+        |   |   |   logo.png
+        |   |   |   payment-item.png
+        |   |   |   
+        |   |   +---banner
+        |   |   |       banner_1.jpg
+        |   |   |       banner_2.jpg
+        |   |   |       
+        |   |   +---blog
+        |   |   |       blog_1.jpg
+        |   |   |       blog_2.jpg
+        |   |   |       blog_3.jpg
+        |   |   |       
+        |   |   +---categories
+        |   |   |       Book_1.jpg
+        |   |   |       Book_2.jpg
+        |   |   |       Book_3.jpg
+        |   |   |       Book_4.jpg
+        |   |   |       Book_5.jpg
+        |   |   |       
+        |   |   \---featured
+        |   |           Book-3.png
+        |   |           Book_1.webp
+        |   |           Book_2.jpg
+        |   |           Book_4.jpg
+        |   |           Book_5.jpg
+        |   |           Note_Book_1.jpg
+        |   |           Pen_1.jpg
+        |   |           Phu_Kien_1.jpg
+        |   |           
+        |   +---js
+        |   |       bootstrap.min.js
+        |   |       jquery-3.3.1.min.js
+        |   |       jquery-ui.min.js
+        |   |       jquery.nice-select.min.js
+        |   |       jquery.slicknav.js
+        |   |       main.js
+        |   |       mixitup.min.js
+        |   |       owl.carousel.min.js
+        |   |       
+        |   +---sass
+        |   |       style.scss
+        |   |       _footer.scss
+        |   |       
+        |   +---scripts
+        |   +---sounds
+        |   +---templates
+        |   \---videos
+        \---Vi_du_2
+            |   index.html
+            |   lab08_json.html
+            |   lab08_slider.html
+            |   
+            +---css
+            |       bootstrap.min.css
+            |       elegant-icons.css
+            |       font-awesome.min.css
+            |       jquery-ui.min.css
+            |       nice-select.css
+            |       owl.carousel.min.css
+            |       slicknav.min.css
+            |       style.css
+            |       
+            +---flashes
+            +---fonts
+            |       ElegantIcons.eot
+            |       ElegantIcons.svg
+            |       ElegantIcons.ttf
+            |       ElegantIcons.woff
+            |       fontawesome-webfont.eot
+            |       fontawesome-webfont.svg
+            |       fontawesome-webfont.ttf
+            |       fontawesome-webfont.woff
+            |       fontawesome-webfont.woff2
+            |       FontAwesome.otf
+            |       
+            +---img
+            |   |   banner.jpg
+            |   |   Book_1.jpg
+            |   |   logo.png
+            |   |   payment-item.png
+            |   |   slide_1.jpg
+            |   |   slide_2.jpg
+            |   |   slide_3.jpg
+            |   |   slide_4.jpg
+            |   |   slide_5.png
+            |   |   
+            |   +---banner
+            |   |       banner_1.jpg
+            |   |       banner_2.jpg
+            |   |       
+            |   +---blog
+            |   |       blog_1.jpg
+            |   |       blog_2.jpg
+            |   |       blog_3.jpg
+            |   |       
+            |   +---categories
+            |   |       Book_1.jpg
+            |   |       Book_2.jpg
+            |   |       Book_3.jpg
+            |   |       Book_4.jpg
+            |   |       Book_5.jpg
+            |   |       
+            |   +---featured
+            |   |       Book-3.png
+            |   |       Book_1.webp
+            |   |       Book_2.jpg
+            |   |       Book_4.jpg
+            |   |       Book_5.jpg
+            |   |       Note_Book_1.jpg
+            |   |       Pen_1.jpg
+            |   |       Phu_Kien_1.jpg
+            |   |       
+            |   \---product
+            |       |   Book-3.png
+            |       |   Book_1.webp
+            |       |   Book_2.jpg
+            |       |   Book_4.jpg
+            |       |   Book_5.jpg
+            |       |   Note_Book_1.jpg
+            |       |   Pen_1.jpg
+            |       |   Phu_Kien_1.jpg
+            |       |   
+            |       \---details
+            |               Book_2_details_1.jpg
+            |               Book_2_details_2.jpg
+            |               Book_2_details_3.jpg
+            |               
+            +---js
+            |       bootstrap.min.js
+            |       jquery-3.3.1.min.js
+            |       jquery-ui.min.js
+            |       jquery.nice-select.min.js
+            |       jquery.slicknav.js
+            |       main.js
+            |       mixitup.min.js
+            |       owl.carousel.min.js
+            |       
+            +---sass
+            |       style.scss
+            |       _footer.scss
+            |       
+            +---scripts
+            +---sounds
+            +---templates
+            \---videos

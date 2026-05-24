@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS để tạo khung cho Slider */
+        .slider-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            border: 2px solid #ddd;
+        }
+
+        .slider-container img {
+            width: 100%;
+            display: block;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        /* Nút bấm Trái/Phải */
+        .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .btn-prev { left: 0; }
+        .btn-next { right: 0; }
+
+        /* 5 Chấm tròn điều hướng */
+        .dots-container {
+            text-align: center;
+            padding: 10px;
+        }
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .active { background-color: #717171; }
+        .myIMG{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="myIMG">
+            <img src="img/slide_1.jpg" alt="">
+        </div>
+
+        <div class="myIMG">
+            <img src="img/slide_2.jpg" alt="">
+        </div>
+
+        <div class="myIMG">
+            <img src="img/slide_3.jpg" alt="">
+        </div>
+
+        <div class="myIMG">
+            <img src="img/slide_4.jpg" alt="">
+        </div>
+
+        <div class="myIMG">
+            <img src="img/slide_2.jpg" alt="">
+        </div>
+        <div>
+            <button class="btn btn-prev" onclick="prevSlide()">&#10094</button>
+            <button class="btn btn-next" onclick="nextSlide()">&#10095</button>
+        </div>
+    </div>
+    
+    <div class="dots-container">
+        <span class="dot" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+        <span class="dot" onclick="goToSlide(3)"></span>
+        <span class="dot" onclick="goToSlide(4)"></span>
+    </div>
+    <script>
+        const images = [
+            "img/slide_1.jpg",
+            "img/slide_2.jpg",
+            "img/slide_3.jpg",
+            "img/slide_4.jpg",
+            "img/slide_2.jpg"
+        ];
+        let currentIndex = 0;
+        const slides = document.getElementsByClassName("myIMG");
+        const dots = document.getElementsByClassName("dot");
+
+        function showSlides(index) {
+            if (index >= slides.length) currentIndex = 0;
+            if (index < 0) currentIndex = slides.length - 1;
+
+            // Ẩn tất cả ảnh
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                dots[i].classList.remove("active");
+            }
+
+            // Hiển thị ảnh hiện tại
+            slides[currentIndex].style.display = "block";
+            dots[currentIndex].classList.add("active");
+        }
+
+        function nextSlide() {
+            currentIndex++;
+            showSlides(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex--;
+            showSlides(currentIndex);
+        }
+
+        function goToSlide(n) {
+            currentIndex = n;
+            showSlides(currentIndex);
+        }
+
+        // Chạy lần đầu tiên
+        showSlides(currentIndex);
+        //slider auto
+        setInterval(nextSlide, 2000);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+.wrapper {
+	display: flex;
+	/* kich hoat flex box*/
+	flex-flow: row wrap;
+	font-weight: bold;
+	text-align: center;
+}
+
+.wrapper>* {
+	padding: 10px;
+	flex: 1 100%;
+	/* cho tất cả phần tử bên trong có độ dài 100% và tỉ lệ chiếm không gian trống là như nhau*/
+}
+
+.header-flex-2 {
+	background: tomato;
+}
+
+.footer-flex-2 {
+	background: lightgreen;
+	order: 4;
+}
+
+.main {
+	text-align: left;
+	background: deepskyblue;
+	height: 400px;
+	flex: 3 0px;
+	/* cho phần nội dung main ở giữa chiếm 3 phần không gian trống so với 2 phần aside bên cạnh */
+	order: 2;
+}
+
+.aside {
+	flex: 1 0 0 ;
+}
+
+/* 2 phần aside sẽ chỉ chiếm 1 phần không gian */
+.aside-1 {
+	background: gold;
+	height: 400px;
+	order: 1;
+}
+
+.aside-2 {
+	background: hotpink;
+	height: 400px;
+	order: 3;
+}
+
+	
+@media screen and (min-width:599px){
+	.container { 
+		display: flex;
+		flex-direction: column; 
+	}
+	
+	.main, .aside-1, .aside-2 {
+		flex: 1 1 100%; 
+		height: 400px;   
+	}
+	
+	 
+	  header { order: 1; }
+	  .main { order: 2; }
+	  .aside-1 { order: 3; }
+	  .aside-2 { order: 4; }
+	  footer { order: 5; }
+	
+}
+@media screen and (min-width:1199px){
+	.main {
+       
+        flex: 1 100%; 
+        order: 1; 
+        
+    }
+    
+    .aside-1 {
+        
+        flex: 1; 
+        order: 2;
+        height: 400px;
+    }
+    
+    .aside-2 {
+    
+        flex: 1; 
+        order: 3;
+        height: 400px;
+    }
+
+    .footer-flex-2 {
+        order: 4; 
+    }
+}

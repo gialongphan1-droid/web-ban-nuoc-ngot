@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Cairo:wght@200..1000&family=Sekuya&display=swap" rel="stylesheet">
+    <style>
+        .menu-ngang{
+           
+            list-style: none;
+            min-height: 30px;
+            display: flex;
+            padding: 0;
+        }
+        .menu-ngang li{
+            
+            margin:  0px;
+            padding: 10px;
+            background-color: aquamarine;
+            transition: background-color 0.3 ease-in-out;
+        }
+        .menu-ngang li a{
+            text-decoration: none;
+        }
+        .menu-ngang li:hover{
+            background-color: #f39c12;
+            border-radius: 5px;
+        }
+        .menu-ngang li a:hover{
+            font-weight: bold;
+            color: white;
+        }
+        .menu-doc{
+            list-style: none;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-doc li{ 
+            background-color:#3498db;
+            margin: 0;
+            padding: 10px;
+            border-bottom: white solid 1px;
+            transition: background-color 0.3 ease-in-out;
+        }
+        .menu-doc li a{
+            text-decoration: none;
+        }
+        .menu-doc li:hover{
+            filter: brightness(130%);
+            background-color: aqua;
+            transition:  background-color 0.3 ease-in-out;
+            font-style: italic;
+        }
+        .sekuya {
+            font-family: "Sekuya", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+    </style>
+</head>
+<body>
+    <ul class ="menu-ngang sekuya">
+        <li><a href=""><b>Trang chủ</b></a></li>
+        <li><a href=""><b>Giới thiệu</b></a></li>
+        <li><a href=""><b>Sản phẩm</b></a></li>
+        <li><a href=""><b>Dịch vụ</b></a></li>
+        <li><a href=""><b>Liên hệ</b></a></li>
+    </ul>
+    <ul class ="menu-doc sekuya">
+        <li><a href=""><b>Trang chủ</b></a></li>
+        <li><a href=""><b>Giới thiệu</b></a></li>
+        <li><a href=""><b>Sản phẩm</b></a></li>
+        <li><a href=""><b>Dịch vụ</b></a></li>
+        <li><a href=""><b>Liên hệ</b></a></li>
+    </ul>
+</body>
+</html>
